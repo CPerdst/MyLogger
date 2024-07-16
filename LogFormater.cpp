@@ -120,22 +120,32 @@ std::string MyLogger::LogFormater::initFormat(MyLogger::LogEvent _event)
 				break;
 			}
 			case 'M': {
+				if (_event.mouth < 10)
+					s_stream << "0";
 				s_stream << _event.mouth;
 				break;
 			}
 			case 'D': {
+				if (_event.day < 10)
+					s_stream << "0";
 				s_stream << _event.mouth;
 				break;
 			}
 			case 'h': {
+				if (_event.hour < 10)
+					s_stream << "0";
 				s_stream << _event.hour;
 				break;
 			}
 			case 'm': {
+				if (_event.minute < 10)
+					s_stream << "0";
 				s_stream << _event.minute;
 				break;
 			}
 			case 's': {
+				if (_event.second < 10)
+					s_stream << "0";
 				s_stream << _event.second;
 				break;
 			}

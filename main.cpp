@@ -51,6 +51,11 @@ void asd(MyLogger::LogEvent& e) {
 
 }
 
+#define __LOGGER__	logger
+#define LOGERROR()	LOG_ERROR(__LOGGER__)
+#define LOGINFO()	LOG_INFO(__LOGGER__)
+#define LOGDEBUG()	LOG_DEBUG(__LOGGER__)
+
 int main() {
 	/*std::unique_ptr<Operation> other;
 	{
@@ -68,7 +73,7 @@ int main() {
 
 	while (true) {
 		std::this_thread::sleep_for(std::chrono::seconds(1));
-		LOG_ERROR(logger) << "hello world!";
+		LOGERROR() << "hello world!";
 	}
 	LOG_DEBUG(logger) << "hello";
 }
