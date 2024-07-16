@@ -1,0 +1,6 @@
+*.tlog
+x64/Debug
+*.user
+*.filters
+*.vcxproj
+*.ixx
